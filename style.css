@@ -1,0 +1,70 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i */
+
+
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 0.625em;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./assets/fonts/Poppins-Regular.ttf"), url("./assets/fonts/Poppins-Bold.ttf"),url("./assets/fonts/Poppins-BoldItalic.ttf"),url("./assets/fonts/Poppins-ExtraBold.ttf"),url("./assets/fonts/Poppins-ExtraBoldItalic.ttf"),url("./assets/fonts/Poppins-Italic.ttf")
+  }
+
+body{
+  background-color: hsl(0, 0%, 94%);
+  font-family: Poppins;
+  font-weight: 700;
+  padding: 20vh 10vw 0;
+}
+
+.container{
+  max-width: 90rem;
+  min-height: 60rem;
+  background-color: #fff;
+  margin: 0 auto;
+  padding:5rem
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
