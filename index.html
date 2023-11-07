@@ -12,27 +12,34 @@
 <body>
   <div class="container">
     <div class="form-row">
-      DD
-
-      Month
-      MM
-
-      Year
-      YYYY
+      <form action="#" class="form">
+        <div class="form-group">
+          <label for="day" class="form__label">Day</label>
+          <input class="form__input" type="text" id="day" placeholder="DD" required>
+        </div>
+        <div class="form-group">
+          <label for="month" class="form__label">Month</label>
+          <input class="form__input" type="text" id="month" placeholder="MM" required>
+        </div>
+        <div class="form-group">
+          <label for="year" class="form__label">Year</label>
+          <input class="form__input" type="text" id="year" placeholder="YYYY" required>
+        </div>
+      </form>
     </div>
     <div class="divider-row">
       <hr class="divider-line">
-      <svg style="background-color: black;" class="divider-icon" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+      <svg class="divider-icon" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
     </div>
     <div class="time-row">
-      <p class="paragraph"><span id="years-number">--</span> years</p>
-      <p class="paragraph"><span id="months-number">--</span> months</p>
-      <p class="paragraph"><span id="days-number">--</span> days</p>
+      <p class="paragraph"><span class="number" id="years-number">- -</span>years</p>
+      <p class="paragraph"><span class="number" id="months-number">- -</span>months</p>
+      <p class="paragraph"><span class="number" id="days-number">- -</span>days</p>
     </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://michal-pawlak.netlify.app">Your Name Here</a>.
+    Coded by <a href="https://michal-pawlak.netlify.app">Michał Pawlak</a>.
   </div>
 </body>
 </html>

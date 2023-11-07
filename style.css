@@ -45,26 +45,150 @@ html{
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url("./assets/fonts/Poppins-Regular.ttf"), url("./assets/fonts/Poppins-Bold.ttf"),url("./assets/fonts/Poppins-BoldItalic.ttf"),url("./assets/fonts/Poppins-ExtraBold.ttf"),url("./assets/fonts/Poppins-ExtraBoldItalic.ttf"),url("./assets/fonts/Poppins-Italic.ttf")
+    font-family: poppinsRegular;
+    src:
+    url("./assets/fonts/Poppins-Regular.ttf"),
   }
+@font-face {
+  font-family: poppinsBold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: poppinsExtraBold;
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: poppinsBoldItalic;
+  src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: poppinsExtraBoldItalic;
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: poppinsItalic;
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+  font-style: italic;
+
+}
 
 body{
   background-color: hsl(0, 0%, 94%);
-  font-family: Poppins;
-  font-weight: 700;
+  font-family: poppinsRegular;
   padding: 20vh 10vw 0;
+  color:hsl(0, 0%, 8%)
 }
 
 .container{
-  max-width: 90rem;
-  min-height: 60rem;
+  max-width: 72rem;
   background-color: #fff;
   margin: 0 auto;
-  padding:5rem
+  padding: 4rem;
+  border-radius: 2rem;
+  border-bottom-right-radius: 18rem;
+  box-shadow: 0 0 5px 10px #eee;
 }
 
+.form-row{
+  padding-bottom: 5rem;
+}
 
+.form{
+  font-size: 3.2rem;
+  display: flex;
+  gap: 2rem;
+}
 
-.attribution { font-size: 11px; text-align: center; }
+.form-group{
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.form__label{
+  font-family: poppinsBold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 0.6rem;
+}
+
+.form__input{
+  font-size: 3.2rem;
+  font-family: poppinsBold;
+  height: 6rem;
+  padding: 0rem 0rem 0 2rem;
+  color:hsl(0, 0%, 8%);
+  border-radius: 5px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  outline:hsl(0, 0%, 84%) solid 1px;
+  cursor: pointer;
+}
+
+.form__input:focus{
+  outline:hsl(0, 1%, 44%) solid 1px;
+}
+
+.invalid-input{
+  outline: hsl(0, 100%, 67%)  solid 1px;
+}
+
+.invalid-text{
+  color: hsl(0, 100%, 67%)
+}
+
+.divider-row{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -5%;
+}
+
+.divider-line{
+  border-color:hsla(0, 0%, 94%,0.3);
+  border-bottom-width: 1px;
+}
+
+.divider-icon{
+  display: inline-block;
+  align-self: flex-end;
+  width: 7rem;
+  height: 7rem;
+  transform: translateY(-51%);
+  padding: 1.9rem;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  transition: background-color 0.3s linear;
+  cursor: pointer;
+}
+
+.divider-icon:hover{
+  background-color: hsl(0, 0%, 8%);
+}
+
+.time-row{
+  display: flex;
+  flex-direction: column;
+}
+
+.paragraph{
+  font-size: 7.4rem;
+  font-family:poppinsExtraBoldItalic;
+  letter-spacing: -2px;
+  margin-bottom: -2%;
+}
+
+.number{
+  color: hsl(228, 45%, 44%);
+  margin-right: 0.8rem;
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top:1rem }
 .attribution a { color: hsl(228, 45%, 44%); }
