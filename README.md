@@ -62,6 +62,8 @@ Learned about possible attributes in form, input and label elements.
 
 Next - build the animation in which numbers animate from 0 all the way to calculated values.
 
+Then - cleanup the JS code.
+
 Also - will learn error handling with catch and throw.
 
 ## Author
