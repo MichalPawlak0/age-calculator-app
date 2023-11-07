@@ -209,3 +209,35 @@ body{
 
 .attribution { font-size: 11px; text-align: center; margin-top:1rem }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:43em) {
+  .container{
+    padding:4rem 2rem;
+    border-bottom-right-radius:30vw ;
+  }
+  .form{
+    gap:2vw;
+    justify-content: space-evenly;
+  }
+  .form-group{
+    width:20vw;
+  }
+  .form__input{
+    height: 12vw;
+    padding: 0 0 0 1vw;
+    font-size: 5vw;
+  }
+  .divider-row{
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  .divider-icon{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-51%);
+  }
+  .paragraph{
+    font-size: 12vw;
+  }
+}
