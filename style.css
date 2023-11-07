@@ -141,8 +141,15 @@ body{
   outline: hsl(0, 100%, 67%)  solid 1px;
 }
 
+.error-message{
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  display: none;
+}
+
 .invalid-text{
-  color: hsl(0, 100%, 67%)
+  color: hsl(0, 100%, 67%);
+  display:inline-block;
 }
 
 .divider-row{
