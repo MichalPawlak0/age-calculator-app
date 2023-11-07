@@ -118,6 +118,7 @@ body{
   letter-spacing: 1.5px;
   color: hsl(0, 1%, 44%);
   margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
 }
 
 .form__input{
@@ -131,6 +132,7 @@ body{
   border-bottom: 3px solid transparent;
   outline:hsl(0, 0%, 84%) solid 1px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .form__input::-webkit-inner-spin-button,.form__input::-webkit-outer-spin-button{
   appearance: none;
@@ -145,14 +147,19 @@ body{
 }
 
 .error-message{
+  font-family: poppinsItalic;
   margin-top: 0.8rem;
   font-size: 1.2rem;
-  display: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: block;
+  opacity: 0;
+
 }
 
 .invalid-text{
   color: hsl(0, 100%, 67%);
-  display:inline-block;
+  opacity:1;
 }
 
 .divider-row{

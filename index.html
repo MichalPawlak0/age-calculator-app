@@ -14,19 +14,19 @@
     <div class="form-row">
       <form action="#" class="form">
         <div class="form-group">
-          <label for="day" class="form__label">Day</label>
-          <input class="form__input" type="number" id="day" placeholder="DD" max="31" min="00" required autofocus>
-          <p class="error-message">Invalid</p>
+          <label for="day" class="form__label" id="label__day">Day</label>
+          <input class="form__input" type="number" id="day" placeholder="DD" max="31" min="01" required autofocus>
+          <p class="error-message" id="error-day">.</p>
         </div>
         <div class="form-group">
-          <label for="month" class="form__label">Month</label>
-          <input class="form__input" type="number" id="month" placeholder="MM" required>
-          <p class="error-message">Invalid</p>
+          <label for="month" class="form__label" id="label__month">Month</label>
+          <input class="form__input" type="number" id="month" max="12" min="01" placeholder="MM" required>
+          <p class="error-message" id="error-month">.</p>
         </div>
         <div class="form-group">
-          <label for="year" class="form__label">Year</label>
+          <label for="year" class="form__label" id="label__year">Year</label>
           <input class="form__input" type="number" id="year" placeholder="YYYY" required>
-          <p class="error-message">Invalid</p>
+          <p class="error-message" id="error-year">.</p>
         </div>
       </form>
     </div>
