@@ -132,6 +132,9 @@ body{
   outline:hsl(0, 0%, 84%) solid 1px;
   cursor: pointer;
 }
+.form__input::-webkit-inner-spin-button,.form__input::-webkit-outer-spin-button{
+  appearance: none;
+}
 
 .form__input:focus{
   outline:hsl(0, 1%, 44%) solid 1px;
