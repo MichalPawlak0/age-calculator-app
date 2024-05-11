@@ -11,6 +11,24 @@ const errorYearEl = document.getElementById("error-year");
 const labelDayEl = document.getElementById("label__day");
 const labelMonthEl = document.getElementById("label__month");
 const labelYearEl = document.getElementById("label__year");
+const yearsWordEl = document.getElementById("years-word");
+const monthsWordEl = document.getElementById("months-word");
+const daysWordEl = document.getElementById("days-word");
+
+let beginning = true;
+
+const myDayOfTheMonth = 2;
+const myMonth = 4;
+const myYear = 1998;
+
+calculateAge();
+beginning = false;
+
+document.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    calculateAge();
+  }
+});
 
 daysInputEl.addEventListener("keypress",(e)=>{
   if((daysInputEl.value.length==2)||(isNaN(daysInputEl.value)))
@@ -69,10 +87,21 @@ yearsInputEl.addEventListener("focus",()=>{
   errorYearEl.innerHTML = ".";
 });
 
-btn.addEventListener("click", () => {
-  let day = daysInputEl.value;
-  let month = monthsInputEl.value;
-  let year = yearsInputEl.value;
+btn.addEventListener("click", calculateAge);
+
+function calculateAge(){
+  let day, month, year;
+
+  if(beginning){
+    day = myDayOfTheMonth;
+    month = myMonth;
+    year = myYear;
+  }else{
+    day = daysInputEl.value;
+    month = monthsInputEl.value;
+    year = yearsInputEl.value;
+  }
+
   let err = false;
   let birthDate = new Date();
   let currentTime = new Date();
@@ -132,17 +161,35 @@ btn.addEventListener("click", () => {
 
   if(err){return;}
 
-  birthDate.setFullYear(year,month-1,day);
+  birthDate.setFullYear(year, month-1, day);
 
   const ms = currentTime.getTime() - birthDate.getTime();
-  const nrOfDays=ms/86400000;
+  const nrOfDays = ms/86400000;
 
   const yearsDisplayVal=nrOfDays/365.24;
-  yearsSpan.innerHTML=Math.floor(yearsDisplayVal);
+  yearsSpan.innerText = Math.floor(yearsDisplayVal);
+
+  if(yearsSpan.innerText == 1){
+    yearsWordEl.innerText = "year";
+  }else{
+    yearsWordEl.innerText = "years";
+  }
 
   const monthsDisplayVal = (yearsDisplayVal - Math.floor(yearsDisplayVal))*12;
-  monthsSpan.innerHTML = Math.floor(monthsDisplayVal);
+  monthsSpan.innerText = Math.floor(monthsDisplayVal);
+
+  if(monthsSpan.innerText == 1){
+    monthsWordEl.innerText = "month";
+  }else{
+    monthsWordEl.innerText = "months";
+  }
 
   const daysDisplayVal = (monthsDisplayVal - Math.floor(monthsDisplayVal))*30;
-  daysSpan.innerHTML = Math.floor(daysDisplayVal);
-});
+  daysSpan.innerText = Math.floor(daysDisplayVal);
+
+  if(daysSpan.innerText == 1){
+    daysWordEl.innerText = "day";
+  }else{
+    daysWordEl.innerText = "days";
+  }
+}

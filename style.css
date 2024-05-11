@@ -33,22 +33,22 @@ The designs were created to the following widths:
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 400i, 700, 800i */
 
-
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 0.625em;
 }
 
 @font-face {
-    font-family: poppinsRegular;
-    src:
-    url("./assets/fonts/Poppins-Regular.ttf"),
-  }
+  font-family: poppinsRegular;
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
 @font-face {
   font-family: poppinsBold;
   src: url("./assets/fonts/Poppins-Bold.ttf");
@@ -75,17 +75,16 @@ html{
   font-family: poppinsItalic;
   src: url("./assets/fonts/Poppins-Italic.ttf");
   font-style: italic;
-
 }
 
-body{
+body {
   background-color: hsl(0, 0%, 94%);
   font-family: poppinsRegular;
   padding: 20vh 10vw 0;
-  color:hsl(0, 0%, 8%)
+  color: hsl(0, 0%, 8%);
 }
 
-.container{
+.container {
   max-width: 72rem;
   background-color: #fff;
   margin: 0 auto;
@@ -95,23 +94,23 @@ body{
   box-shadow: 0 0 5px 10px #eee;
 }
 
-.form-row{
+.form-row {
   padding-bottom: 5rem;
 }
 
-.form{
+.form {
   font-size: 3.2rem;
   display: flex;
   gap: 2rem;
 }
 
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   width: 15rem;
 }
 
-.form__label{
+.form__label {
   font-family: poppinsBold;
   font-size: 1rem;
   text-transform: uppercase;
@@ -121,32 +120,33 @@ body{
   transition: all 0.3s ease;
 }
 
-.form__input{
+.form__input {
   font-size: 3.2rem;
   font-family: poppinsBold;
   height: 6rem;
   padding: 0rem 0rem 0 2rem;
-  color:hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
   border-radius: 5px;
   border: none;
   border-bottom: 3px solid transparent;
-  outline:hsl(0, 0%, 84%) solid 1px;
-  cursor: pointer;
+  outline: hsl(0, 0%, 84%) solid 1px;
+  cursor: text;
   transition: all 0.3s ease;
 }
-.form__input::-webkit-inner-spin-button,.form__input::-webkit-outer-spin-button{
+.form__input::-webkit-inner-spin-button,
+.form__input::-webkit-outer-spin-button {
   appearance: none;
 }
 
-.form__input:focus{
-  outline:hsl(0, 1%, 44%) solid 1px;
+.form__input:focus {
+  outline: hsl(0, 1%, 44%) solid 1px;
 }
 
-.invalid-input{
-  outline: hsl(0, 100%, 67%)  solid 1px;
+.invalid-input {
+  outline: hsl(0, 100%, 67%) solid 1px;
 }
 
-.error-message{
+.error-message {
   font-family: poppinsItalic;
   margin-top: 0.8rem;
   font-size: 1.2rem;
@@ -154,26 +154,25 @@ body{
   transition: all 0.3s ease;
   display: block;
   opacity: 0;
-
 }
 
-.invalid-text{
+.invalid-text {
   color: hsl(0, 100%, 67%);
-  opacity:1;
+  opacity: 1;
 }
 
-.divider-row{
+.divider-row {
   display: flex;
   flex-direction: column;
   margin-bottom: -5%;
 }
 
-.divider-line{
-  border-color:hsla(0, 0%, 94%,0.3);
+.divider-line {
+  border-color: hsla(0, 0%, 94%, 0.3);
   border-bottom-width: 1px;
 }
 
-.divider-icon{
+.divider-icon {
   display: inline-block;
   align-self: flex-end;
   width: 7rem;
@@ -186,58 +185,118 @@ body{
   cursor: pointer;
 }
 
-.divider-icon:hover{
+.divider-icon:hover {
   background-color: hsl(0, 0%, 8%);
 }
 
-.time-row{
+.time-row {
   display: flex;
   flex-direction: column;
 }
 
-.paragraph{
+.paragraph {
   font-size: 7.4rem;
-  font-family:poppinsExtraBoldItalic;
+  font-family: poppinsExtraBoldItalic;
   letter-spacing: -2px;
   margin-bottom: -2%;
 }
 
-.number{
+.number {
   color: hsl(228, 45%, 44%);
   margin-right: 0.8rem;
 }
 
-.attribution { font-size: 11px; text-align: center; margin-top:1rem }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-@media screen and (max-width:43em) {
-  .container{
-    padding:4rem 2rem;
-    border-bottom-right-radius:30vw ;
+@media screen and (max-width: 43em) {
+  body {
+    padding: 0;
+    height: 100vh;
   }
-  .form{
-    gap:2vw;
+  .container {
+    padding: 2rem;
+    border-bottom-right-radius: 0;
+    height: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
   }
-  .form-group{
-    width:20vw;
+  .form {
+    gap: 2vw;
+    justify-content: center;
   }
-  .form__input{
-    height: 12vw;
+  .form-group {
+    width: 27vw;
+  }
+  .form__label {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    text-align: center;
+  }
+  .form__input {
+    height: 16vw;
     padding: 0 0 0 1vw;
     font-size: 5vw;
+    text-align: center;
   }
-  .divider-row{
+  .divider-row {
     position: relative;
     margin-bottom: 4rem;
   }
-  .divider-icon{
+  .divider-icon {
     position: absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%,-51%);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -51%);
+    width: clamp(7rem, 20vw, 10rem);
+    height: clamp(7rem, 20vw, 10rem);
   }
-  .paragraph{
-    font-size: 12vw;
+  .time-row {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .paragraph {
+    font-size: clamp(6rem, 15vw, 8rem);
+  }
+  .attribution {
+    margin: 0;
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .container {
+    justify-content: flex-start;
+    gap: clamp(2rem, 4vh, 4rem);
+  }
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-row {
+    padding-bottom: 2rem;
+  }
+  .form-group {
+    width: 50%;
+    gap: 0;
+  }
+  .form__input {
+    font-size: 3rem;
+    height: 7vh;
+  }
+  .divider-row {
+    margin-bottom: 0;
+  }
+  .time-row {
+    gap: 0.8rem;
+  }
+  .paragraph {
+    font-size: clamp(4rem, 14vw, 7rem);
   }
 }
